@@ -115,7 +115,14 @@ section{padding-block:clamp(56px,7vw,88px)}
 .proof{display:flex;flex-wrap:wrap;justify-content:space-around;gap:10px 28px;margin:0;padding:16px 0;list-style:none;font-weight:700;font-size:16px;color:var(--blue)}
 .proof li{display:flex;gap:6px;align-items:center}
 .proof svg{width:18px;height:18px;color:var(--ok)}
-@media (max-width:600px){.proof{justify-content:flex-start;flex-direction:column;padding:14px 0}.zocalo{margin-top:32px}}
+@media (max-width:600px){.proof{justify-content:space-between;flex-direction:row;flex-wrap:nowrap;gap:8px;padding:12px 0;font-size:clamp(11px,3.1vw,14px)}
+  .proof li{gap:5px;align-items:flex-start;text-align:left}
+  .proof svg{margin-top:1px}
+  .proof svg{width:14px;height:14px;flex:none}
+  .subnav .wrap{gap:14px;height:48px}
+  .subnav nav{gap:14px;font-size:13px}
+  .subnav{position:sticky}
+  .subnav .wrap{position:relative;padding-right:22px;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 26px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 26px),transparent)}.zocalo{margin-top:32px}}
 .hero-art{position:relative;max-width:420px;justify-self:end;width:100%}
 .tag{position:absolute;background:var(--surface);border:2px solid var(--blue-line);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow);text-align:center}
 .tag b{display:block;font-family:var(--num);font-size:34px;line-height:1;color:var(--blue)}
@@ -430,7 +437,7 @@ button,input,select,textarea{font-family:inherit}
       <a href="#preguntas">Preguntas</a>
     </nav>
     <a class="sub-login" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">¿Ya sos parte? Ver mis puntos</a>
-    <a class="btn btn-coral btn-sm" href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">Registrate gratis</a>
+    <a class="btn btn-coral btn-sm" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Registrate gratis</a>
   </div>
 </div>
 
@@ -445,7 +452,7 @@ button,input,select,textarea{font-family:inherit}
         <div class="duo">
           <div class="duo-card">
             <div><b>¿Todavía no sos parte?</b><span>Registrate gratis y empezá a sumar.</span></div>
-            <a class="btn btn-coral" href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">Registrate gratis <svg><use href="#arrow"></use></svg></a>
+            <a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Registrate gratis <svg><use href="#arrow"></use></svg></a>
           </div>
           <div class="duo-card">
             <div><b>¿Ya sos parte?</b><span>Mirá tus puntos, tu nivel y tus beneficios.</span></div>
@@ -584,7 +591,7 @@ button,input,select,textarea{font-family:inherit}
           
           <tr class="cta-row">
             <td class="lbl"></td>
-            <td class="col-gen" colspan="4"><a class="btn btn-coral" href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">Sumarme gratis al club</a></td>
+            <td class="col-gen" colspan="4"><a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Sumarme gratis al club</a></td>
             
           </tr>
         </tbody>
@@ -678,7 +685,7 @@ button,input,select,textarea{font-family:inherit}
       <div class="faq-list">
         <p class="faq-group">Sumarte al club</p>
         <details open=""><summary>¿Cuánto cuesta ser parte?</summary><div class="ans">Cero. Nada. Ni un hueso. Puppis Club es <strong>100% gratis</strong>. Solo tenés que ser mayor de 18 años, vivir en Argentina y registrarte.</div></details>
-        <details><summary>¿Cómo me registro?</summary><div class="ans">En <a href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">puppis.com.ar/registro-puppis-club</a> o en cualquier tienda Puppis. Completás tus datos y listo: <strong>empezás a sumar puntos con tu primera compra</strong> hecha con tu cuenta.</div></details>
+        <details><summary>¿Cómo me registro?</summary><div class="ans">En <a href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">micuenta.puppis.com.ar</a> o en cualquier tienda Puppis. Completás tus datos y listo: <strong>empezás a sumar puntos con tu primera compra</strong> hecha con tu cuenta.</div></details>
         <details><summary>¿Cómo uso mis beneficios?</summary><div class="ans">En caja, <strong>decí tu número de DNI antes de pagar</strong> (te pueden pedir el documento para confirmar que sos vos). En la web, comprá con tu cuenta iniciada. El descuento de tu nivel se aplica solo.</div></details>
         <details><summary>¿Dónde valen mis beneficios?</summary><div class="ans">En las <strong>tiendas Puppis de todo el país</strong> y en <strong>puppis.com.ar</strong>. No aplican en Rappi, PedidosYa, MercadoLibre ni otras plataformas externas.</div></details>
 
@@ -716,7 +723,7 @@ button,input,select,textarea{font-family:inherit}
           <p>Registrate gratis y hacé que tu próxima compra ya sume.</p>
         </div>
         <div class="acts">
-          <a class="btn btn-coral" href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">Registrate gratis <svg><use href="#arrow"></use></svg></a>
+          <a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Registrate gratis <svg><use href="#arrow"></use></svg></a>
           <a class="btn btn-line" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Ya soy socio: ver mis puntos</a>
         </div>
       </div>
@@ -734,7 +741,7 @@ button,input,select,textarea{font-family:inherit}
 
 <div class="mbar">
   <p>Es gratis y te lleva 1 minuto.</p>
-  <a class="btn btn-coral btn-sm" href="https://www.puppis.com.ar/registro-puppis-club" target="_blank" rel="noopener">Registrate</a>
+  <a class="btn btn-coral btn-sm" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Registrate</a>
 </div>
 
 
