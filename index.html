@@ -1,4 +1,4 @@
-<html lang="es-AR" data-qb-installed="true"><head>
+<html lang="es-AR"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, indexifembedded">
@@ -440,7 +440,7 @@ button,input,select,textarea{font-family:inherit}
 
 
 <!-- Subnavegación propia de la landing -->
-<div class="subnav at-end">
+<div class="subnav at-start">
   <div class="wrap">
     <span class="wordmark"><b>puppis</b><span>Club</span></span>
     <nav aria-label="Secciones de Puppis Club">
@@ -484,7 +484,7 @@ button,input,select,textarea{font-family:inherit}
           </div>
           <div class="car-ctrl">
             <button class="car-btn" id="prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-            <div class="dots" id="dots"><button type="button" aria-label="Ir a la diapositiva 1" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 2" aria-current="true"></button><button type="button" aria-label="Ir a la diapositiva 3" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 4" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 5" aria-current="false"></button></div>
+            <div class="dots" id="dots"></div>
             <button class="car-btn" id="next" type="button" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
           </div>
         </div>
@@ -570,7 +570,7 @@ button,input,select,textarea{font-family:inherit}
         <p class="lede">Arrancás en General y subís de nivel con tus visitas y tus compras. Cada escalón suma descuentos; en amarillo, lo que mejora al subir.</p>
       </div>
 
-      <div class="tiers-mobile" id="tiers-mobile"><div class="tm-chips" role="tablist"><button type="button" class="tm-chip" role="tab" aria-selected="false">General</button><button type="button" class="tm-chip" role="tab" aria-selected="true">Aliado</button><button type="button" class="tm-chip" role="tab" aria-selected="false">Amigo Fiel</button><button type="button" class="tm-chip" role="tab" aria-selected="false">Fanático</button></div><div class="tm-card"><div class="tm-head"><h3>Aliado</h3><span class="tier-tag">Gratis · nivel 1</span><p class="tm-claim">Con una compra al mes ya estás acá.</p></div><div class="tm-steps" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></div><p class="tm-group">Descuentos</p><div class="tm-list"><div class="tm-row"><span>Todas tus compras, sin tope</span><b class="">5%</b></div><div class="tm-row"><span>Snacks</span><b class="">10%</b></div><div class="tm-row"><span>Piedras sanitarias</span><b class="">10%</b></div><div class="tm-row"><span>Nufood</span><b class="">10%</b></div><div class="tm-row"><span>Marcas recomendadas</span><b class="">10%</b></div></div><p class="tm-group">Para todos los socios, desde el día uno</p><div class="tm-list"><div class="tm-row"><span>Promociones especiales<small>Las promos habituales para todos los clientes, más propuestas a medida dentro del club</small></span><b class="">✓</b></div><div class="tm-row"><span>Invitaciones a eventos y actividades</span><b class="">✓</b></div></div><a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Sumarme gratis al club</a></div></div>
+      <div class="tiers-mobile" id="tiers-mobile" hidden></div>
       <div class="tbl-scroll" id="tiers-desktop">
       <table class="tiers-tbl">
         <thead>
@@ -763,74 +763,6 @@ button,input,select,textarea{font-family:inherit}
 
 
 
-<dialog class="notes" id="notes" aria-labelledby="notes-h">
-  <div class="notes-in">
-    <div class="notes-head">
-      <div><p class="eyebrow">Notas de la propuesta · v6</p><h2 id="notes-h">Qué cambió y por qué</h2></div>
-      <button class="close" id="close-notes" type="button" aria-label="Cerrar notas">×</button>
-    </div>
-    <div class="nt">
-      <h3>Esta versión</h3>
-      <ul>
-        <li><b>Tipografía (v6):</b> toda la landing pasa a <b>Nunito</b> —títulos, textos, números y botones—, la familia del sitio y de la guía de estilos de Puppis. Se dejan de cargar Baloo 2, Barlow y Barlow Semi Condensed. Los pesos se recalibraron: títulos en 900, subtítulos y etiquetas en 800, textos de tabla en 400.</li>
-        <li><b>Íconos (v6):</b> los círculos numerados se reemplazan por los íconos de marca —más, formulario y estrella en la card de ayuda; signo más en los cuatro pasos de “Sumás por venir”; medalla, trofeo y copa en las tarjetas de ahorro y en “Fanático no es imposible”.</li>
-        <li><b>Primera pantalla (v5):</b> vuelve el hero de texto (H1, bajada y botones en HTML, mejor para SEO). Las dos acciones principales, arriba a la izquierda: “¿Todavía no sos parte?” (registro) y “¿Ya sos parte?” (ver mis puntos). Solo la imagen de la derecha es un banner rotativo con tarjetas: hasta 10% OFF en todo (primero), hasta 20% en snacks y piedras, no arrancás de cero, sumás puntos y 12 meses de vigencia.</li>
-        <li><b>Orden de secciones (v4):</b> Paso 1, Paso 2 y Paso 3 juntos, después “Por qué sumarte” y las preguntas. El banner de “ver mis puntos” del final se reemplazó por el acceso para socios arriba, en el banner y en la subnavegación.</li>
-        <li><b>Integración con el sitio:</b> la landing arranca debajo del header real de puppis.com.ar (barra de Puppis Club, header amarillo, menú de categorías y migas de pan). La navegación propia del club pasa a una subnavegación fija con las anclas y el botón de registro.</li>
-        <li>Vuelve a la estructura limpia de la v1: fondos blancos y grises, una sola sección de color (registro) y las cards de niveles originales.</li>
-        <li>De las piezas de marca quedan la paleta (azul Puppis, amarillo, celeste y botón coral), la tipografía redondeada, los pasos 1-2-3 y dos fotos.</li>
-        <li>Escala de tipografía más contenida: títulos de 28 a 56 px y textos de 15 a 18 px.</li>
-        <li>Todo registro o consulta de puntos lleva a micuenta.puppis.com.ar.</li>
-        <li>Copy cercano y con guiños de tutores, pero con títulos que conservan las palabras de búsqueda.</li>
-      </ul>
-    </div>
-    <div class="nt">
-      <h3>SEO on-page</h3>
-      <dl class="kv">
-        <dt>URL</dt><dd>/puppis-club (se mantiene)</dd>
-        <dt>Title</dt><dd>Puppis Club: club de beneficios gratis para tu mascota | Puppis</dd>
-        <dt>Meta description</dt><dd>Puppis Club es gratis: sumá puntos cada vez que venís y comprás, y ahorrá hasta 10% en todas tus compras. Tiendas, web y app. Registrate en 1 minuto.</dd>
-        <dt>H1</dt><dd>Sumate a Puppis Club y ahorrá en cada mimo</dd>
-        <dt>Keywords</dt><dd>puppis club, puntos puppis, descuentos pet shop, club de beneficios mascotas, arena para gatos descuento, mi cuenta puppis</dd>
-      </dl>
-      <ul style="margin-top:10px">
-        <li>Todo el contenido en texto HTML y fotos con texto alternativo.</li>
-        <li>Datos estructurados FAQPage y, dentro de Organization, MemberProgram con los 3 niveles (Google todavía no lo muestra en Argentina).</li>
-      </ul>
-      <div class="code">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "¿Los puntos de Puppis Club vencen?",
-    "acceptedAnswer": {"@type": "Answer",
-      "text": "Sí. Cada punto dura 12 meses desde que lo sumás."}
-  }]
-}</div>
-    </div>
-    <div class="nt">
-      <h3>Qué dicen los datos del club (AR y COL)</h3>
-      <ul>
-        <li><b>Beneficios por nivel:</b> las ofertas cargadas en ARG confirman la tabla. Aliado 5% + 10% en Nufood, snacks, marca propia y piedras; Amigo Fiel 7% + 10% Nufood y marca propia + 15% snacks y piedras; Fanático 10% + 15% Nufood y marca propia + 20% snacks y piedras.</li>
-        <li><b>Registrarse no alcanza, hay que usarlo:</b> en Colombia solo 1 de cada 4 socios usó el beneficio en agosto. Por eso la landing explica cómo usarlo (DNI en caja, cuenta iniciada en la web) y empuja la próxima visita.</li>
-        <li><b>La segunda compra es la clave:</b> de cada 100 clientes nuevos, 41 (AR) y 43 (COL) no vuelven nunca. El copy insiste en “tu próxima visita ya suma”.</li>
-        <li><b>El valor del socio es la frecuencia:</b> en COL el socio deja 1,65 veces el margen de un no socio porque viene 56% más seguido, no por ticket. Por eso el mensaje central es sumar puntos en cada visita.</li>
-        <li><b>El club ya pesa:</b> 17,2% de la venta ICG en ARG (1 al 13 de septiembre) y 20.412 socios en el padrón.</li>
-      </ul>
-    </div>
-    <div class="nt todo">
-      <h3>A confirmar antes de publicar</h3>
-      <ul>
-        <li><b>Grupo “General”:</b> en el reporte de ARG, 54% del padrón está en “General”, sin beneficio del club. Hay que confirmar qué hace falta para pasar a Aliado. Si no es automático al registrarse, la landing tiene que decirlo (hoy evita prometerlo).</li>
-        <li>Nombre público de las categorías: la web dice “marcas recomendadas” y “piedras sanitarias Puppis”; las ofertas dicen “marca propia” y “piedras”; las piezas dicen “arenas marca propia”.</li>
-        <li>Que el socio se identifica con DNI en caja y con la cuenta iniciada en la web.</li>
-        <li>Si las compras por PedidosYa y Rappi suman puntos (hoy no se identifican al cliente; no se menciona en la landing).</li>
-        <li>Puntos por visita y por compra, puntos necesarios para cada nivel y URL directa al alta en Mi Cuenta.</li>
-      </ul>
-    </div>
-  </div>
-</dialog>
-
 <script>
 (function(){
   var fmt = new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0});
@@ -844,6 +776,7 @@ button,input,select,textarea{font-family:inherit}
   }
   r.addEventListener('input',upd); upd();
   var track=document.getElementById('track'), slides=track.children, dotsEl=document.getElementById('dots'), cur=0, timer;
+  dotsEl.innerHTML='';
   for(var i=0;i<slides.length;i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir a la diapositiva '+(i+1));b.addEventListener('click',function(){go(i);stop();});dotsEl.appendChild(b);})(i);}
   function mark(){[].forEach.call(dotsEl.children,function(b,i){b.setAttribute('aria-current',i===cur?'true':'false');});}
   function go(i){cur=(i+slides.length)%slides.length;track.scrollTo({left:track.clientWidth*cur});mark();}
@@ -893,7 +826,7 @@ button,input,select,textarea{font-family:inherit}
       chips.appendChild(b);
     });
     var card=document.createElement('div');
-    box.appendChild(chips); box.appendChild(card);
+    box.innerHTML=''; box.appendChild(chips); box.appendChild(card);
     function render(){
       [].forEach.call(chips.children,function(b,i){b.setAttribute('aria-selected', i===sel?'true':'false');});
       var h=heads[sel];
@@ -939,13 +872,6 @@ button,input,select,textarea{font-family:inherit}
     if(more) more.addEventListener('click',function(){ w.scrollBy({left:Math.round(w.clientWidth*.7),behavior:'smooth'}); });
     state();
   })();
-  var d = document.getElementById('notes');
-  var openNotes = document.getElementById('open-notes'), closeNotes = document.getElementById('close-notes');
-  if(d){
-    if(openNotes) openNotes.addEventListener('click',function(){ d.showModal(); });
-    if(closeNotes) closeNotes.addEventListener('click',function(){ d.close(); });
-    d.addEventListener('click',function(e){ if(e.target===d) d.close(); });
-  }
 })();
 </script>
 
@@ -964,6 +890,5 @@ document.querySelectorAll('.subnav nav a').forEach(function (link) {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>
