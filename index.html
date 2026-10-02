@@ -416,24 +416,14 @@ button,input,select,textarea{font-family:inherit}
 .save b,.slider output{font-weight:900;letter-spacing:-.01em}
 .eyebrow,.slider label{font-weight:800}
 </style>
-<style>body{margin:0}</style>
+<style>body{margin:0}
+
+#registro, #como-funciona, #niveles, #por-que, #preguntas { scroll-margin-top: 120px; }
+
+</style>
 
 </head>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    var id = link.getAttribute('href').slice(1);
-    var target = id && document.getElementById(id);
-    if (!target) return;
-    e.preventDefault();
-    window.parent.postMessage(
-      { type: 'puppisClubScroll', top: target.getBoundingClientRect().top + window.scrollY },
-      'https://www.puppis.com.ar'
-    );
-  });
-});
-</script> 
 <body class="js-tiers">
 
 
@@ -963,4 +953,18 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
 
 
-</body></html>
+</body>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    var id = link.getAttribute('href').slice(1);
+    var target = id && document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</html>
