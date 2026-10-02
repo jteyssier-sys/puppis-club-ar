@@ -440,15 +440,14 @@ button,input,select,textarea{font-family:inherit}
 
 
 <!-- Subnavegación propia de la landing -->
-<div class="subnav at-start">
+<div class="subnav at-end">
   <div class="wrap">
     <span class="wordmark"><b>puppis</b><span>Club</span></span>
     <nav aria-label="Secciones de Puppis Club">
-      <a href="#registro">Cómo sumarme</a>
-      <a href="#como-funciona">Puntos</a>
-      <a href="#niveles">Niveles</a>
-      <a href="#por-que">Por qué sumarte</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="https://www.puppis.com.ar/puppis-club#registro" target="_top">Cómo sumarme</a>
+      <a href="https://www.puppis.com.ar/puppis-club#como-funciona" target="_top">Puntos</a>
+      <a href="https://www.puppis.com.ar/puppis-club#niveles" target="_top">Niveles</a>
+      <a href="https://www.puppis.com.ar/puppis-club#por-que" target="_top">Por qué sumarte</a>
     </nav>
     <a class="sub-login" href="https://micuenta.puppis.com.ar/" target="_top" rel="noopener">¿Ya sos parte? Ver mis puntos</a>
     <a class="btn btn-coral btn-sm" href="https://micuenta.puppis.com.ar/" target="_top" rel="noopener">Registrate gratis</a>
@@ -485,7 +484,7 @@ button,input,select,textarea{font-family:inherit}
           </div>
           <div class="car-ctrl">
             <button class="car-btn" id="prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-             <div class="dots" id="dots"></div>
+            <div class="dots" id="dots"><button type="button" aria-label="Ir a la diapositiva 1" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 2" aria-current="true"></button><button type="button" aria-label="Ir a la diapositiva 3" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 4" aria-current="false"></button><button type="button" aria-label="Ir a la diapositiva 5" aria-current="false"></button></div>
             <button class="car-btn" id="next" type="button" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
           </div>
         </div>
@@ -571,16 +570,16 @@ button,input,select,textarea{font-family:inherit}
         <p class="lede">Arrancás en General y subís de nivel con tus visitas y tus compras. Cada escalón suma descuentos; en amarillo, lo que mejora al subir.</p>
       </div>
 
-      <div class="tiers-mobile" id="tiers-mobile" hidden></div>
+      <div class="tiers-mobile" id="tiers-mobile"><div class="tm-chips" role="tablist"><button type="button" class="tm-chip" role="tab" aria-selected="false">General</button><button type="button" class="tm-chip" role="tab" aria-selected="true">Aliado</button><button type="button" class="tm-chip" role="tab" aria-selected="false">Amigo Fiel</button><button type="button" class="tm-chip" role="tab" aria-selected="false">Fanático</button></div><div class="tm-card"><div class="tm-head"><h3>Aliado</h3><span class="tier-tag">Gratis · nivel 1</span><p class="tm-claim">Con una compra al mes ya estás acá.</p></div><div class="tm-steps" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></div><p class="tm-group">Descuentos</p><div class="tm-list"><div class="tm-row"><span>Todas tus compras, sin tope</span><b class="">5%</b></div><div class="tm-row"><span>Snacks</span><b class="">10%</b></div><div class="tm-row"><span>Piedras sanitarias</span><b class="">10%</b></div><div class="tm-row"><span>Nufood</span><b class="">10%</b></div><div class="tm-row"><span>Marcas recomendadas</span><b class="">10%</b></div></div><p class="tm-group">Para todos los socios, desde el día uno</p><div class="tm-list"><div class="tm-row"><span>Promociones especiales<small>Las promos habituales para todos los clientes, más propuestas a medida dentro del club</small></span><b class="">✓</b></div><div class="tm-row"><span>Invitaciones a eventos y actividades</span><b class="">✓</b></div></div><a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_blank" rel="noopener">Sumarme gratis al club</a></div></div>
       <div class="tbl-scroll" id="tiers-desktop">
       <table class="tiers-tbl">
         <thead>
           <tr>
             <th class="lbl"><span class="sr-only">Beneficio</span></th>
-            <th class="col-gen"><span class="tier-name">General</span><span class="tier-tag">Nivel 0 · al registrarte</span><a class="tier-link" href="#">Ver qué incluye →</a></th>
-            <th><span class="tier-name">Aliado</span><span class="tier-tag">Gratis · nivel 1</span><a class="tier-link" href="#">Ver qué incluye →</a></th>
-            <th><span class="tier-name">Amigo Fiel</span><span class="tier-tag">Gratis · nivel 2</span><a class="tier-link" href="#">Ver qué incluye →</a></th>
-            <th class="col-fan"><span class="tier-name">Fanático</span><span class="tier-tag">Gratis · nivel 3</span><a class="tier-link" href="#">Ver qué incluye →</a></th>
+            <th class="col-gen"><span class="tier-name">General</span><span class="tier-tag">Nivel 0 · al registrarte</span></th>
+            <th><span class="tier-name">Aliado</span><span class="tier-tag">Gratis · nivel 1</span></th>
+            <th><span class="tier-name">Amigo Fiel</span><span class="tier-tag">Gratis · nivel 2</span></th>
+            <th class="col-fan"><span class="tier-name">Fanático</span><span class="tier-tag">Gratis · nivel 3</span></th>
                       </tr>
         </thead>
         <tbody>
@@ -955,10 +954,9 @@ button,input,select,textarea{font-family:inherit}
 
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+document.querySelectorAll('.subnav nav a').forEach(function (link) {
   link.addEventListener('click', function (e) {
-    var id = link.getAttribute('href').slice(1);
-    var target = id && document.getElementById(id);
+    var target = link.hash && document.getElementById(link.hash.slice(1));
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -966,5 +964,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 });
 </script>
 
-</body>
-</html>
+
+
+</body></html>
