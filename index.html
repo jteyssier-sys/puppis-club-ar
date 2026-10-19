@@ -296,6 +296,14 @@ section{padding-block:clamp(56px,7vw,88px)}
 .tm-head{display:grid;gap:6px}
 .tm-head h3{font-size:30px}
 .tm-card.one .tm-head h3{color:var(--vet)}
+.tm-card.one .tier-tag{background:var(--vet);color:#fff}
+/* mobile: alineación de filas y etiqueta */
+.tm-head .tier-tag{justify-self:start;width:auto;max-width:100%}
+.tm-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:16px}
+.tm-row>span{padding-top:3px;line-height:1.35}
+.tm-row b{text-align:right;line-height:1.15}
+.tm-row b.up{justify-self:end}
+.tm-row small.vnote{color:var(--vet);margin-top:2px}
 .tm-claim{font-size:15px;color:var(--ink-2)}
 .tm-steps{display:flex;gap:6px}
 .tm-steps i{flex:1;height:6px;border-radius:6px;background:var(--blue-pale)}
@@ -566,8 +574,8 @@ button,input,select,textarea{font-family:inherit}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Paso 3</p>
-        <h2 id="tier-h">De General a Fanático.</h2>
-        <p class="lede">Arrancás en General y subís de nivel con tus visitas y tus compras. Cada escalón suma descuentos; en amarillo, lo que mejora al subir.</p>
+        <h2 id="tier-h">De General a Fanático. Y si querés, Puppis ONE Plus.</h2>
+        <p class="lede">Arrancás en General y subís de nivel con tus visitas y tus compras. Cada escalón suma descuentos; en amarillo, lo que mejora al subir. Puppis ONE Plus es el plan de salud que podés contratar.</p>
       </div>
 
       <div class="tiers-mobile" id="tiers-mobile" hidden></div>
@@ -580,7 +588,8 @@ button,input,select,textarea{font-family:inherit}
             <th><span class="tier-name">Aliado</span><span class="tier-tag">Gratis · nivel 1</span></th>
             <th><span class="tier-name">Amigo Fiel</span><span class="tier-tag">Gratis · nivel 2</span></th>
             <th class="col-fan"><span class="tier-name">Fanático</span><span class="tier-tag">Gratis · nivel 3</span></th>
-                      </tr>
+            <th class="col-one"><span class="tier-name">Puppis ONE Plus</span><span class="tier-tag">Se contrata · plan de salud</span><a class="tier-link" href="#">Ver el plan →</a></th>
+          </tr>
         </thead>
         <tbody>
           <tr class="claim">
@@ -589,23 +598,27 @@ button,input,select,textarea{font-family:inherit}
             <td>Con una compra al mes ya estás acá.</td>
             <td>Venís seguido y se nota en la caja.</td>
             <td class="col-fan">No vas a encontrar mejor oferta en ningún lado.</td>
-            
+            <td class="col-one">Salud y ahorro, todo junto.</td>
           </tr>
-          <tr class="grp"><td colspan="5">Descuentos</td></tr>
-          <tr><th scope="row" class="lbl">Todas tus compras, sin tope</th><td class="col-gen dash">—</td><td><span class="pct">5%</span></td><td><span class="pct up">7%</span></td><td class="col-fan"><span class="pct up">10%</span></td></tr>
-          <tr><th scope="row" class="lbl">Snacks</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct up">15%</span></td><td class="col-fan"><span class="pct up">20%</span></td></tr>
-          <tr><th scope="row" class="lbl">Piedras sanitarias</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct up">15%</span></td><td class="col-fan"><span class="pct up">20%</span></td></tr>
-          <tr><th scope="row" class="lbl">Nufood</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct">10%</span></td><td class="col-fan"><span class="pct up">15%</span></td></tr>
-          <tr><th scope="row" class="lbl">Marcas recomendadas</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct">10%</span></td><td class="col-fan"><span class="pct up">15%</span></td></tr>
-          
-          <tr class="grp"><td colspan="5">Para todos los socios, desde el día uno</td></tr>
-          <tr><th scope="row" class="lbl">Promociones especiales<span class="tsub">Las promos habituales para todos los clientes, más propuestas a medida dentro del club</span></th><td class="col-gen ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="col-fan ok">✓</td></tr>
-          <tr><th scope="row" class="lbl">Invitaciones a eventos y actividades</th><td class="col-gen ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="col-fan ok">✓</td></tr>
-          
+          <tr class="grp"><td colspan="6">Descuentos</td></tr>
+          <tr><th scope="row" class="lbl">Todas tus compras, sin tope</th><td class="col-gen dash">—</td><td><span class="pct">5%</span></td><td><span class="pct up">7%</span></td><td class="col-fan"><span class="pct up">10%</span></td><td class="col-one"><span class="pct vet">10%</span><span class="cell-note">aplica a Alimentos</span></td></tr>
+          <tr><th scope="row" class="lbl">Snacks</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct up">15%</span></td><td class="col-fan"><span class="pct up">20%</span></td><td class="col-one"><span class="pct vet">20%</span></td></tr>
+          <tr><th scope="row" class="lbl">Piedras sanitarias</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct up">15%</span></td><td class="col-fan"><span class="pct up">20%</span></td><td class="col-one"><span class="pct vet">20%</span><span class="cell-note">todas las marcas</span></td></tr>
+          <tr><th scope="row" class="lbl">Nufood</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct">10%</span></td><td class="col-fan"><span class="pct up">15%</span></td><td class="col-one"><span class="pct vet">10%</span></td></tr>
+          <tr><th scope="row" class="lbl">Marcas recomendadas</th><td class="col-gen dash">—</td><td><span class="pct">10%</span></td><td><span class="pct">10%</span></td><td class="col-fan"><span class="pct up">15%</span></td><td class="col-one"><span class="pct vet">20%</span><span class="cell-note">todas las marcas de accesorios</span></td></tr>
+          <tr><th scope="row" class="lbl">Farmacia</th><td class="col-gen dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="col-fan dash">—</td><td class="col-one"><span class="pct vet">15%</span></td></tr>
+
+          <tr class="grp"><td colspan="6">Para todos los socios, desde el día uno</td></tr>
+          <tr><th scope="row" class="lbl">Promociones especiales<span class="tsub">Las promos habituales para todos los clientes, más propuestas a medida dentro del club</span></th><td class="col-gen ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="col-fan ok">✓</td><td class="col-one ok">✓</td></tr>
+          <tr><th scope="row" class="lbl">Invitaciones a eventos y actividades</th><td class="col-gen ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="col-fan ok">✓</td><td class="col-one ok">✓</td></tr>
+
+          <tr class="grp vet"><td colspan="6">Salud, con Puppis ONE Plus</td></tr>
+          <tr><th scope="row" class="lbl">Consultas, controles y vacunas</th><td class="col-gen dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="col-fan dash">—</td><td class="col-one"><span class="pct vet">100%</span></td></tr>
+
           <tr class="cta-row">
             <td class="lbl"></td>
             <td class="col-gen" colspan="4"><a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_top" rel="noopener">Sumarme gratis al club</a></td>
-            
+            <td class="col-one"><a class="btn btn-vet" href="#">Conocer Puppis ONE Plus</a></td>
           </tr>
         </tbody>
       </table>
@@ -822,7 +835,7 @@ button,input,select,textarea{font-family:inherit}
     var chips=document.createElement('div'); chips.className='tm-chips'; chips.setAttribute('role','tablist');
     heads.forEach(function(h,i){
       var b=document.createElement('button'); b.type='button'; b.className='tm-chip'+(h.one?' one':''); b.textContent=h.name;
-      b.setAttribute('role','tab'); b.addEventListener('click',function(){sel=i;render();});
+      b.setAttribute('role','tab'); b.addEventListener('click',function(){sel=i;render();var c=chips,l=b.offsetLeft-c.offsetLeft;c.scrollTo({left:Math.max(0,l-(c.clientWidth-b.offsetWidth)/2),behavior:'smooth'});});
       chips.appendChild(b);
     });
     var card=document.createElement('div');
@@ -840,8 +853,8 @@ button,input,select,textarea{font-family:inherit}
         rows.forEach(function(r){
           var v=r.vals[sel];
           var val=v.txt==='✓'?'✓':v.txt;
-          html+='<div class="tm-row"><span>'+r.label+(r.note?'<small>'+r.note+'</small>':'')+'</span>'+
-                '<b class="'+(v.up?'up':'')+'">'+val+(v.note?'<small>'+v.note+'</small>':'')+'</b></div>';
+          html+='<div class="tm-row"><span>'+r.label+(r.note?'<small>'+r.note+'</small>':'')+(v.note?'<small class="vnote">'+v.note+'</small>':'')+'</span>'+
+                '<b class="'+(v.up?'up':'')+'">'+val+'</b></div>';
         });
         html+='</div>';
       });
