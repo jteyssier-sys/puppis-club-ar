@@ -588,7 +588,7 @@ button,input,select,textarea{font-family:inherit}
             <th><span class="tier-name">Aliado</span><span class="tier-tag">Gratis · nivel 1</span></th>
             <th><span class="tier-name">Amigo Fiel</span><span class="tier-tag">Gratis · nivel 2</span></th>
             <th class="col-fan"><span class="tier-name">Fanático</span><span class="tier-tag">Gratis · nivel 3</span></th>
-            <th class="col-one"><span class="tier-name">Puppis ONE Plus</span><span class="tier-tag">Se contrata · plan de salud</span><a class="tier-link" href="#">Ver el plan →</a></th>
+            <th class="col-one"><span class="tier-name">Puppis ONE Plus</span><span class="tier-tag">Se contrata · plan de salud</span></th>
           </tr>
         </thead>
         <tbody>
@@ -618,7 +618,7 @@ button,input,select,textarea{font-family:inherit}
           <tr class="cta-row">
             <td class="lbl"></td>
             <td class="col-gen" colspan="4"><a class="btn btn-coral" href="https://micuenta.puppis.com.ar/" target="_top" rel="noopener">Sumarme gratis al club</a></td>
-            <td class="col-one"><a class="btn btn-vet" href="#">Conocer Puppis ONE Plus</a></td>
+            <td class="col-one"><a class="btn btn-vet" href="https://one.puppis.com.ar/" target="_top" rel="noopener">Conocer Puppis ONE Plus</a></td>
           </tr>
         </tbody>
       </table>
@@ -861,7 +861,7 @@ button,input,select,textarea{font-family:inherit}
       var sinDesc=groups.some(function(g){return g.rows.some(function(r){var v=r.vals[sel];return v&&v.txt&&v.txt!=='—';});});
       if(heads[sel].name==='General'){html+='<p class="tm-none">Todavía sin descuentos del club. Sumá puntos con tus visitas y compras para llegar a Aliado.</p>';}
       var b=h.one?ctaOne:cta;
-      if(b){html+='<a class="btn '+(h.one?'btn-vet':'btn-coral')+'" href="'+b.getAttribute('href')+'" target="_blank" rel="noopener">'+b.textContent.trim()+'</a>';}
+      if(b){html+='<a class="btn '+(h.one?'btn-vet':'btn-coral')+'" href="'+b.getAttribute('href')+'" target="'+(b.getAttribute('target')||'_top')+'" rel="noopener">'+b.textContent.trim()+'</a>';}
       if(h.link){html+='<p class="tm-link"><a href="'+h.href+'">'+h.link+'</a></p>';}
       card.className='tm-card'+(h.one?' one':'');
       card.innerHTML=html;
